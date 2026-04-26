@@ -1,0 +1,27 @@
+﻿<Grid Width="330">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <StackPanel Grid.Column="0">
+        <TextBlock Text="Temperatura" FontSize="10" Foreground="Gray"/>
+        <TextBlock Text="{Binding Temperatura, StringFormat={}{0}°C}" 
+                   FontWeight="Bold" FontSize="14" Foreground="#C0392B"/>
+    </StackPanel>
+
+    <StackPanel Grid.Column="1">
+        <TextBlock Text="Humidade" FontSize="10" Foreground="Gray"/>
+        <TextBlock Text="{Binding Umidade, StringFormat={}{0}%}" 
+                   FontWeight="Bold" FontSize="14" Foreground="#2980B9"/>
+    </StackPanel>
+
+    <StackPanel Grid.Column="2" VerticalAlignment="Center">
+        <TextBlock Text="Status" FontSize="10" Foreground="Gray" HorizontalAlignment="Right"/>
+        <TextBlock Text="{Binding Status}" 
+                   Foreground="{Binding CorStatus}" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Right"/>
+    </StackPanel>
+</Grid>
